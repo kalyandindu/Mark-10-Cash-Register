@@ -1,0 +1,47 @@
+:root {
+    --primary-color: #10B981;
+
+  }
+  
+  .header-class{
+    color: var(--primary-color);
+    text-align: center
+  }
+  .description{
+    text-align: center;
+    font-size: large;
+  }
+  .input-label{
+      display:block;
+      font-size: large;
+      text-align: center;
+  }
+  .input-class{
+     text-align: center;
+     margin:auto;
+     border: 0.2rem solid var(--primary-color);
+     border-radius: 0.4rem;
+     padding: 0.4rem;
+     display: block;
+  }
+  #btn-click{
+      margin: 10px auto;
+      display: block;
+      background-color: var(--primary-color);
+      color: white;
+      padding:0.4rem;
+  }
+  .display-notes{
+      margin:20px auto;
+      
+  }
+ table, th,td {
+  border: 2px solid var(--primary-color);
+  border-collapse:collapse;
+  padding: 0.7rem;
+  
+}
+  .display-notes .change-return{
+      font-size: x-large;
+
+  }
