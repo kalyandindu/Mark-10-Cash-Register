@@ -8,19 +8,23 @@ const availableNotes = [2000, 500, 200, 100, 20, 10, 5, 1];
 
 findChange.addEventListener("click", function validateAmount(){
     
-
+    hideMessage();
     if (billAmount.value > 0) {
-        if (cashGiven.value >= billAmount.value) {
+        if (Number(cashGiven.value) >= Number(billAmount.value)) {
             const amountToBePaid = cashGiven.value - billAmount.value;
             changeCalculator(amountToBePaid);
         } 
-        
         else {
             
             shMessage("Amount paid is less that the bill, Please give us full amount");
+            changeToZero();
             
         }
-      }
+    }
+    else {
+        shMessage("Enter valid bill amount");
+        changeToZero();
+    }
     
 }
 
@@ -33,14 +37,20 @@ function changeCalculator(amount) {
       noOfNotes[i].innerText = numberOfNotes;
     }
   }
+
+function changeToZero() {
+    for (let i = 0; i < availableNotes.length; i++) {
+        noOfNotes[i].innerText = 0;
+      }
+}
   
 
 function hideMessage(){
     msg.style.display = "none";
 }
 
-function shMessage(msg){
+function shMessage(message){
     msg.style.display= "block";
-    msg.innerText = msg;
+    msg.innerText = message;
 }
     
