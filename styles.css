@@ -35,6 +35,10 @@
       margin:20px auto;
       
   }
+  #err-msg {
+    text-align: center;
+    
+  }
  table, th,td {
   border: 2px solid var(--primary-color);
   border-collapse:collapse;
